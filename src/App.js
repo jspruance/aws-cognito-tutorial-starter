@@ -7,6 +7,8 @@ import Products from './components/Products';
 import ProductAdmin from './components/ProductAdmin';
 import LogIn from './components/auth/LogIn';
 import Register from './components/auth/Register';
+import ForgotPassword from './components/auth/ForgotPassword';
+import ForgotPasswordVerification from './components/auth/ForgotPasswordVerification';
 import Footer from './components/Footer';
 import { library } from '@fortawesome/fontawesome-svg-core';
 import { faEdit, faLock, faEnvelope } from '@fortawesome/free-solid-svg-icons';
@@ -27,6 +29,8 @@ class App extends Component {
               <Route exact path="/admin" component={ProductAdmin} />
               <Route exact path="/login" component={LogIn} />
               <Route exact path="/register" component={Register} />
+              <Route exact path="/forgotpassword" component={ForgotPassword} />
+              <Route exact path="/forgotpasswordverification" component={ForgotPasswordVerification} />
             </Switch>
             <Footer />
           </div>

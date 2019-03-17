@@ -38,7 +38,7 @@ class Register extends Component {
       });
     }
 
-    // AWS Cognito register logic
+    // AWS Cognito integration here
   };
 
   onInputChange = event => {
@@ -55,7 +55,7 @@ class Register extends Component {
           <h1>Register</h1>
           <FormErrors formerrors={this.state.errors} />
 
-          <form className="" onSubmit={this.handleSubmit}>
+          <form onSubmit={this.handleSubmit}>
             <div className="field">
               <p className="control">
                 <input 

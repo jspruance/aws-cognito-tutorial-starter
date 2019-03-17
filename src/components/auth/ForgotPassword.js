@@ -2,10 +2,9 @@ import React, { Component } from 'react';
 import FormErrors from "../FormErrors";
 import Validate from "../utility/FormValidation";
 
-export default class LogIn extends Component {
+class ForgotPassword extends Component {
   state = {
     email: "",
-    password: "",
     errors: {
       cognito: null,
       blankfield: false
@@ -21,7 +20,7 @@ export default class LogIn extends Component {
     });
   };
 
-  handleSubmit = async event => {
+  forgotPasswordHandler = async event => {
     event.preventDefault();
 
     // Form validation
@@ -47,15 +46,19 @@ export default class LogIn extends Component {
     return (
       <section className="section auth">
         <div className="container">
-          <h1>Log in</h1>
+          <h1>Forgot your password?</h1>
+          <p>
+            Please enter the email address associated with your account and we'll
+            email you a password reset link.
+          </p>
           <FormErrors formerrors={this.state.errors} />
 
-          <form onSubmit={this.handleSubmit}>
+          <form onSubmit={this.forgotPasswordHandler}>
             <div className="field">
               <p className="control has-icons-left has-icons-right">
-                <input 
-                  className="input" 
+                <input
                   type="email"
+                  className="input"
                   id="email"
                   aria-describedby="emailHelp"
                   placeholder="Enter email"
@@ -64,21 +67,6 @@ export default class LogIn extends Component {
                 />
                 <span className="icon is-small is-left">
                   <i className="fas fa-envelope"></i>
-                </span>
-              </p>
-            </div>
-            <div className="field">
-              <p className="control has-icons-left">
-                <input 
-                  className="input" 
-                  type="password"
-                  id="password"
-                  placeholder="Password"
-                  value={this.state.password}
-                  onChange={this.onInputChange}
-                />
-                <span className="icon is-small is-left">
-                  <i className="fas fa-lock"></i>
                 </span>
               </p>
             </div>
@@ -101,3 +89,4 @@ export default class LogIn extends Component {
   }
 }
 
+export default ForgotPassword;
