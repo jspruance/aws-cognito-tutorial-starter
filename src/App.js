@@ -9,6 +9,8 @@ import LogIn from './components/auth/LogIn';
 import Register from './components/auth/Register';
 import ForgotPassword from './components/auth/ForgotPassword';
 import ForgotPasswordVerification from './components/auth/ForgotPasswordVerification';
+import ChangePassword from './components/auth/ChangePassword';
+import ChangePasswordConfirm from './components/auth/ChangePasswordConfirm';
 import Footer from './components/Footer';
 import { library } from '@fortawesome/fontawesome-svg-core';
 import { faEdit, faLock, faEnvelope } from '@fortawesome/free-solid-svg-icons';
@@ -31,6 +33,8 @@ class App extends Component {
               <Route exact path="/register" component={Register} />
               <Route exact path="/forgotpassword" component={ForgotPassword} />
               <Route exact path="/forgotpasswordverification" component={ForgotPasswordVerification} />
+              <Route exact path="/changepassword" component={ChangePassword} />
+              <Route exact path="/changepasswordconfirm" component={ChangePasswordConfirm} />
             </Switch>
             <Footer />
           </div>

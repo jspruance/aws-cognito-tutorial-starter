@@ -2,14 +2,15 @@ import React, { Component } from 'react';
 import FormErrors from "../FormErrors";
 import Validate from "../utility/FormValidation";
 
-class ForgotPasswordVerification extends Component {
+class ChangePassword extends Component {
   state = {
-    verificationcode: "",
-    email: "",
+    oldpassword: "",
     newpassword: "",
+    confirmpassword: "",
     errors: {
       cognito: null,
-      blankfield: false
+      blankfield: false,
+      passwordmatch: false
     }
   };
 
@@ -17,12 +18,13 @@ class ForgotPasswordVerification extends Component {
     this.setState({
       errors: {
         cognito: null,
-        blankfield: false
+        blankfield: false,
+        passwordmatch: false
       }
     });
   };
 
-  passwordVerificationHandler = async event => {
+  handleSubmit = async event => {
     event.preventDefault();
 
     // Form validation
@@ -48,48 +50,30 @@ class ForgotPasswordVerification extends Component {
     return (
       <section className="section auth">
         <div className="container">
-          <h1>Set new password</h1>
-          <p>
-            Please enter the verification code sent to your email address below,
-            your email address and a new password.
-          </p>
+          <h1>Change Password</h1>
           <FormErrors formerrors={this.state.errors} />
 
-          <form onSubmit={this.passwordVerificationHandler}>
-            <div className="field">
-              <p className="control">
-                <input
-                  type="text"
-                  className="input"
-                  id="verificationcode"
-                  aria-describedby="verificationCodeHelp"
-                  placeholder="Enter verification code"
-                  value={this.state.verificationcode}
-                  onChange={this.onInputChange}
-                />
-              </p>
-            </div>
+          <form onSubmit={this.handleSubmit}>
             <div className="field">
               <p className="control has-icons-left">
                 <input 
                   className="input" 
-                  type="email"
-                  id="email"
-                  aria-describedby="emailHelp"
-                  placeholder="Enter email"
-                  value={this.state.email}
+                  type="password"
+                  id="oldpassword"
+                  placeholder="Old password"
+                  value={this.state.oldpassword}
                   onChange={this.onInputChange}
                 />
                 <span className="icon is-small is-left">
-                  <i className="fas fa-envelope"></i>
+                  <i className="fas fa-lock"></i>
                 </span>
               </p>
             </div>
             <div className="field">
               <p className="control has-icons-left">
                 <input
-                  type="password"
                   className="input"
+                  type="password"
                   id="newpassword"
                   placeholder="New password"
                   value={this.state.newpassword}
@@ -101,9 +85,29 @@ class ForgotPasswordVerification extends Component {
               </p>
             </div>
             <div className="field">
+              <p className="control has-icons-left">
+                <input
+                  className="input"
+                  type="password"
+                  id="confirmpassword"
+                  placeholder="Confirm password"
+                  value={this.state.confirmpassword}
+                  onChange={this.onInputChange}
+                />
+                <span className="icon is-small is-left">
+                  <i className="fas fa-lock"></i>
+                </span>
+              </p>
+            </div>
+            <div className="field">
+              <p className="control">
+                <a href="/forgotpassword">Forgot password?</a>
+              </p>
+            </div>
+            <div className="field">
               <p className="control">
                 <button className="button is-success">
-                  Login
+                  Register
                 </button>
               </p>
             </div>
@@ -114,4 +118,4 @@ class ForgotPasswordVerification extends Component {
   }
 }
 
-export default ForgotPasswordVerification;
+export default ChangePassword;
