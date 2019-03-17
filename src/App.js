@@ -14,10 +14,8 @@ import ChangePasswordConfirm from './components/auth/ChangePasswordConfirm';
 import Welcome from './components/auth/Welcome';
 import Footer from './components/Footer';
 import { library } from '@fortawesome/fontawesome-svg-core';
-import { faEdit, faLock, faEnvelope } from '@fortawesome/free-solid-svg-icons';
+import { faEdit } from '@fortawesome/free-solid-svg-icons';
 library.add(faEdit);
-library.add(faLock);
-library.add(faEnvelope);
 
 class App extends Component {
   render() {
