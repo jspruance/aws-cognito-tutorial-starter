@@ -9,7 +9,7 @@ class ForgotPassword extends Component {
       cognito: null,
       blankfield: false
     }
-  };
+  }
 
   clearErrorState = () => {
     this.setState({
@@ -18,7 +18,7 @@ class ForgotPassword extends Component {
         blankfield: false
       }
     });
-  };
+  }
 
   forgotPasswordHandler = async event => {
     event.preventDefault();
@@ -33,14 +33,14 @@ class ForgotPassword extends Component {
     }
 
     // AWS Cognito integration here
-  };
+  }
 
   onInputChange = event => {
     this.setState({
       [event.target.id]: event.target.value
     });
     document.getElementById(event.target.id).classList.remove("is-danger");
-  };
+  }
 
   render() {
     return (

@@ -12,7 +12,7 @@ class ChangePassword extends Component {
       blankfield: false,
       passwordmatch: false
     }
-  };
+  }
 
   clearErrorState = () => {
     this.setState({
@@ -22,7 +22,7 @@ class ChangePassword extends Component {
         passwordmatch: false
       }
     });
-  };
+  }
 
   handleSubmit = async event => {
     event.preventDefault();
@@ -44,7 +44,7 @@ class ChangePassword extends Component {
       [event.target.id]: event.target.value
     });
     document.getElementById(event.target.id).classList.remove("is-danger");
-  };
+  }
 
   render() {
     return (
@@ -107,7 +107,7 @@ class ChangePassword extends Component {
             <div className="field">
               <p className="control">
                 <button className="button is-success">
-                  Register
+                  Change password
                 </button>
               </p>
             </div>

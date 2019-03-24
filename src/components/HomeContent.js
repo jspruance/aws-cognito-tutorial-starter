@@ -6,9 +6,6 @@ export default function HomeContent() {
         <div className="columns features">
             <div className="column is-4">
                 <div className="card is-shady">
-                    <div className="card-image has-text-centered">
-                        <i className="fa fa-paw"></i>
-                    </div>
                     <div className="card-content">
                         <div className="content">
                             <h4>Energy conservation</h4>
@@ -20,9 +17,6 @@ export default function HomeContent() {
             </div>
             <div className="column is-4">
                 <div className="card is-shady">
-                     <div className="card-image has-text-centered">
-                        <i className="fa fa-empire"></i>
-                    </div>
                     <div className="card-content">
                         <div className="content">
                             <h4>Water conservation</h4>
@@ -35,9 +29,6 @@ export default function HomeContent() {
             </div>
             <div className="column is-4">
                 <div className="card is-shady">
-                    <div className="card-image has-text-centered">
-                        <i className="fa fa-apple"></i>
-                    </div>
                      <div className="card-content">
                         <div className="content">
                             <h4>Solar energy</h4>

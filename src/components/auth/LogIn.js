@@ -2,9 +2,9 @@ import React, { Component } from 'react';
 import FormErrors from "../FormErrors";
 import Validate from "../utility/FormValidation";
 
-export default class LogIn extends Component {
+class LogIn extends Component {
   state = {
-    email: "",
+    username: "",
     password: "",
     errors: {
       cognito: null,
@@ -52,19 +52,16 @@ export default class LogIn extends Component {
 
           <form onSubmit={this.handleSubmit}>
             <div className="field">
-              <p className="control has-icons-left has-icons-right">
+              <p className="control">
                 <input 
                   className="input" 
-                  type="email"
-                  id="email"
-                  aria-describedby="emailHelp"
-                  placeholder="Enter email"
-                  value={this.state.email}
+                  type="text"
+                  id="username"
+                  aria-describedby="usernameHelp"
+                  placeholder="Enter username or email"
+                  value={this.state.username}
                   onChange={this.onInputChange}
                 />
-                <span className="icon is-small is-left">
-                  <i className="fas fa-envelope"></i>
-                </span>
               </p>
             </div>
             <div className="field">
@@ -101,3 +98,4 @@ export default class LogIn extends Component {
   }
 }
 
+export default LogIn;

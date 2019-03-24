@@ -4,8 +4,7 @@ import Validate from "../utility/FormValidation";
 
 class Register extends Component {
   state = {
-    firstname: "",
-    lastname: "",
+    username: "",
     email: "",
     password: "",
     confirmpassword: "",
@@ -14,7 +13,7 @@ class Register extends Component {
       blankfield: false,
       passwordmatch: false
     }
-  };
+  }
 
   clearErrorState = () => {
     this.setState({
@@ -24,7 +23,7 @@ class Register extends Component {
         passwordmatch: false
       }
     });
-  };
+  }
 
   handleSubmit = async event => {
     event.preventDefault();
@@ -46,7 +45,7 @@ class Register extends Component {
       [event.target.id]: event.target.value
     });
     document.getElementById(event.target.id).classList.remove("is-danger");
-  };
+  }
 
   render() {
     return (
@@ -61,23 +60,10 @@ class Register extends Component {
                 <input 
                   className="input" 
                   type="text"
-                  id="firstname"
-                  aria-describedby="firstNameHelp"
-                  placeholder="Enter first name"
-                  value={this.state.firstname}
-                  onChange={this.onInputChange}
-                />
-              </p>
-            </div>
-            <div className="field">
-              <p className="control">
-                <input 
-                  className="input" 
-                  type="text"
-                  id="lastname"
-                  aria-describedby="lastNameHelp"
-                  placeholder="Enter last name"
-                  value={this.state.lastname}
+                  id="username"
+                  aria-describedby="userNameHelp"
+                  placeholder="Enter username"
+                  value={this.state.username}
                   onChange={this.onInputChange}
                 />
               </p>
