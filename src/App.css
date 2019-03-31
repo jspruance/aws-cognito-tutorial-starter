@@ -57,3 +57,7 @@ body {
   margin-top: 1em;
   max-width: 50%;
 }
+
+.buttons {
+  margin-left: 1em;
+}
