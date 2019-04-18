@@ -33,7 +33,7 @@ class App extends Component {
               <Route exact path="/forgotpassword" component={ForgotPassword} />
               <Route exact path="/forgotpasswordverification" component={ForgotPasswordVerification} />
               <Route exact path="/changepassword" component={ChangePassword} />
-              <Route exact path="/changepasswordconfirm" component={ChangePasswordConfirm} />
+              <Route exact path="/changepasswordconfirmation" component={ChangePasswordConfirm} />
               <Route exact path="/welcome" component={Welcome} />
             </Switch>
             <Footer />
